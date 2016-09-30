@@ -37,7 +37,7 @@ def time_name_resolution(name_server, name, rr_type):
 
 def query_handler(name):
     """ 
-       Callback invoked by ganglia to measure metrics
+       Callback invoked by ganglia to ocollect metrics
     """
     name_servers = []
     metric, dns_server_name, domain, rrec = name.split('_')
