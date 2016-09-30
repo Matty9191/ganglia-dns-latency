@@ -1,1 +1,20 @@
-# ganglia-dns-latency
+# Ganglia DNS latency
+
+Ganglia python plug-in to collect and graph DNS query response times
+
+# Sample CLI ouput
+
+$ python dnslatency.py
+It took 0.014626 to resolve google.com on google-public-dns-b.google.com
+It took 0.017215 to resolve google.com on google-public-dns-a.google.com
+
+# Installation
+
+Copy dnslatency.pyconf to /etc/ganglia/conf.d and add one or more params similar to the following:
+
+param googledns_dns_resolution {
+    # Format: SERVER_NAME<SPACE>NAME_TO_QUERY<SPACE>RECORD_TYPE
+    #   value = "google-public-dns-a.google.com google.com A"
+}
+
+Each param needs a unique name and the value should contain the name of the DNS server to query, a domain name and the type of record to check.
