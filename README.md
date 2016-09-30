@@ -10,7 +10,7 @@ It took 0.017215 to resolve google.com on google-public-dns-a.google.com
 </pre>
 # Installation
 
-Copy dnslatency.pyconf to /etc/ganglia/conf.d and add one or more params similar to the following:
+Create a dnslatency.pyconf in /etc/ganglia/conf.d with one or more params similar to the following:
 <pre>
 param googledns_dns_resolution {
     # Format: SERVER_NAME<SPACE>NAME_TO_QUERY<SPACE>RECORD_TYPE
