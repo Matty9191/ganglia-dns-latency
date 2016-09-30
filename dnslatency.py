@@ -7,6 +7,7 @@ DEBUG = 0
 descriptors = []
 
 def resolve_name(name):
+    """ Convert a name to an IP address """
     try:
         ip = socket.gethostbyname(name)
     except socket.herror:
