@@ -27,7 +27,9 @@ def time_name_resolution(name_server, name, rr_type):
     try:
         dns_answer = resolver.query(name, rr_type)
     except:
-        # TODO: Adjust error handling return value
+        # TODO: Enhance error handling to log DNS response headers fields 
+        # if a result isn't returned. This information can be used as an
+        # index into a tcpdump cyclical buffer collection to pinpoint issues.
         return 60
 
     end_time = timer()        
