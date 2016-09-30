@@ -11,7 +11,6 @@ def resolve_name(name):
         ip = socket.gethostbyname(name)
     except socket.herror:
         ip = "8.8.8.8"
-
     return ip
 
 def time_name_resolution(name_server, name, rr_type):
