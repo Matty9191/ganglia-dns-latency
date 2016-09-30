@@ -74,7 +74,7 @@ def metric_init(params):
 
     return descriptors
 
-if __name__ == "__main__":
+def Main():
     # Code to test the script w/o involving ganglia
     params = { 'googlednsa_dns_resolution': 'google-public-dns-a.google.com google.com A',
                'googlednsb_dns_resolution': 'google-public-dns-b.google.com google.com A',
@@ -84,3 +84,7 @@ if __name__ == "__main__":
         latency = desc['call_back'](desc['name'])
         metric, dns_server, domain, rrec = desc['name'].split("_")
         print "It took %f to resolve %s on %s" % (latency, domain, dns_server)
+
+
+if __name__ == "__main__":
+    Main()
